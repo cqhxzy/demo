@@ -1,0 +1,16 @@
+#端口号
+server:
+  port: 8090
+
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB   #限制文件大小
+  resources:
+    static-locations: classpath:/META-INF/resources/, classpath:/resources/, classpath:/static/, classpath:/public/,file:${upload-path}
+  devtools:
+    restart:
+      #通过trigger-file中的version设置版本号，版本号迭代时，重启服务
+      trigger-file: triggerfile
+upload-path: E:\upload\
